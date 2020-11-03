@@ -334,7 +334,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -621,6 +621,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f92a394d1bc0ff34c9760dcd1d0b3279, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0bf916690d47c24891539192145d863, type: 2}
     - target: {fileID: 919132149155446097, guid: f92a394d1bc0ff34c9760dcd1d0b3279, type: 3}
       propertyPath: m_Name
       value: Earth
