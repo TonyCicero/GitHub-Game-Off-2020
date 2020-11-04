@@ -76,10 +76,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _CentrePoint: {r: 0, g: -5000, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorMax: {r: 0.32531285, g: 1, b: 0, a: 1}
-    - _ColorMid: {r: 0.16565657, g: 1, b: 0, a: 1}
+    - _CentrePoint: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.5377358, g: 0.33380643, b: 0.12428801, a: 1}
+    - _ColorMax: {r: 0.47210175, g: 1, b: 0.07075471, a: 1}
+    - _ColorMid: {r: 0.3406117, g: 1, b: 0, a: 1}
     - _ColorMin: {r: 0, g: 0.19064093, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
