@@ -12,6 +12,7 @@ public class console : MonoBehaviour
     public consoleVars cVars;
     public bool UsingTerminal;
 
+    computerAudio audioMngr;
 
     [System.Serializable]
     public class commands
@@ -243,11 +244,12 @@ public class console : MonoBehaviour
         }
         else
         {
+            audioMngr.playClip(0);
             checklist.Passed = false;
             output += "<color=red>Not Ready for Launch</color>\n";
             if (!checklist.sys_State)
             {
-                output += "<color=red>System State must eqaul " + checklist.req_sysState + "</color>\n";
+                output += "<color=red>System State must equal " + checklist.req_sysState + "</color>\n";
             }
         }
         return output;
@@ -304,6 +306,7 @@ public class console : MonoBehaviour
     void Start()
     {
         checklist = new LaunchChecklist();
+        audioMngr = GetComponent<computerAudio>();
     }
 
     string fit2Screen(string s)
