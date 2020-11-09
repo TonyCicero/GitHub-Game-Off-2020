@@ -20,7 +20,7 @@ public class DialogSys : MonoBehaviour
     }
 
     [SerializeField]
-    dialog[] Dialogs;
+    public dialog[] Dialogs;
 
     IEnumerator ShowDialog(dialog d)
     {
@@ -45,7 +45,7 @@ public class DialogSys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        callShowDialog(Dialogs[0]);
+        
     }
 
     // Update is called once per frame
