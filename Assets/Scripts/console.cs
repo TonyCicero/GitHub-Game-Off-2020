@@ -14,6 +14,13 @@ public class console : MonoBehaviour
 
     computerAudio audioMngr;
 
+    [SerializeField]
+    GameObject player;
+    [SerializeField]
+    float accessDist =2;
+    [SerializeField]
+    GameObject useUI;
+
     [System.Serializable]
     public class commands
     {
@@ -357,6 +364,19 @@ public class console : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        var dist = Vector3.Distance(transform.position, player.transform.position);
+        if(dist <= accessDist && !UsingTerminal) {
+            useUI.SetActive(true);
+            if (Input.GetButtonUp("USE"))
+            {
+                UsingTerminal = true;;
+            }
+        }
+        else
+        {
+            useUI.SetActive(false);
+        }
         
         if (UsingTerminal) //check if user is using the terminal
         {
@@ -364,6 +384,10 @@ public class console : MonoBehaviour
             {
                 StartCoroutine(readInput(c));
                
+            }
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                UsingTerminal = false;
             }
         }
 

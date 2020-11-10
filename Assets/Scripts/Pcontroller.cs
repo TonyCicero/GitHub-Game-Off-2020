@@ -17,9 +17,13 @@ public class Pcontroller : MonoBehaviour
     float camSens = 0.25f; //camera sensitivity
     private Vector3 lastMouse = new Vector3(0, 0, 0);
 
+    [SerializeField]
+    console con;
+
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
         controller = gameObject.AddComponent<CharacterController>();
     }
@@ -27,6 +31,11 @@ public class Pcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (con.UsingTerminal) //if using terminal, dont allow movement
+        {
+            return;
+        }
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
